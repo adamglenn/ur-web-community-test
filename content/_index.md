@@ -53,7 +53,7 @@ content_blocks:
         size: "fs-3"
       copy:
         font:
-  - _bookshop_name: section/test
+  - _bookshop_name: section/hero
     elements:
       background_image:
         src:
