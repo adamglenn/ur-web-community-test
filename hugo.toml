@@ -40,16 +40,13 @@ pageRef = '/faqs'
 weight = 80
 
 [module]
-replacements = 'components.local -> ../component-library, github.com/wvuweb/wvu-ds-v3-bookshop-components -> ../../wvu-ds-v3-bookshop-components/layouts/partials/component-library'
+replacements = 'components.local -> ../component-library'
 
 [[module.imports]]
 path = 'github.com/wvuweb/wvu-ds-v3-hugo'
 
 [[module.imports]]
 path = 'components.local'
-
-[[module.imports]]
-path = 'github.com/wvuweb/wvu-ds-v3-bookshop-components'
 
 [[module.imports]]
 path = 'github.com/cloudcannon/bookshop/hugo/v3'

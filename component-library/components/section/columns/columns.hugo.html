@@ -1,0 +1,12 @@
+<section>
+  <div class="container py-8">
+    <div class="row {{ .config.justify_content }} {{ range .config.gutters }}{{ . }} {{ end }}">
+      {{ range .elements.columns }}
+        <div class="{{ range .config.column_widths }}{{ . }}{{ end }} {{ .config.text_align }}">
+          {{ partial "bookshop_bindings" `.Params.column_blocks` }}
+          {{ partial "bookshop_partial" (slice "column" .column_blocks) }}
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
