@@ -62,7 +62,7 @@ content_blocks:
         icon: "location-dot"
         label: "Label"
         text: "Super Heading"
-      heading: "Hello, world! Test 2"
+      heading: "Hello, world! Test 3"
       subheading: "Subheading"
       lead: "Lead text."
       copy: "Copy."
