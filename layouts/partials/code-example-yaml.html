@@ -1,0 +1,5 @@
+{{ $code := transform.Remarshal "yaml" . }}
+
+<div class="rounded-3" style="background-color: #272822;">
+  {{ transform.Highlight $code "yaml" }}
+</div>

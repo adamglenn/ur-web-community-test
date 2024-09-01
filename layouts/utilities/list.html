@@ -1,0 +1,269 @@
+{{ define "main" }}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-4">
+        <div class="mt-5">
+          {{ partial "menu-sidebar.html" (dict "menuID" "docs" "page" .) }}
+        </div>
+      </div>
+      <div class="col-xl-8">
+        <div class="py-6">
+          <h1 class="display-3">{{ .Title }}</h1>
+          {{ .Content }}
+          <h2 class="mb-5">Vibe: WVU Experience</h2>
+          <h2 class="display-1 oliviar-black position-relative text-uppercase wvu-text-echo-outline text-wvu-accent--sunset" data-text="Heading">
+            Heading
+          </h2>
+          <h2 class="display-1 oliviar-black position-relative text-uppercase wvu-text-echo-outline wvu-text-echo-shadow text-wvu-accent--sunset" data-text="Heading">
+            Heading
+          </h2>
+          <h2 class="display-1 oliviar-black position-relative wvu-text-echo-outline wvu-text-echo-shadow text-wvu-accent--sunset" data-text="Heading">
+            Heading
+          </h2>
+          <h2 class="my-5">Kickers</h2>
+          <p class="wvu-shout wvu-text-letter-spacing-md wvu-text-letter-spacing-lg wvu-p-max-width fs-1 lh-lg">
+            So we will go above and we will go beyond, and when everyone else goes back...
+          </p>
+          <p class="iowan-old-style-black-italic wvu-text-letter-spacing wvu-p-max-width fs-1">
+            So we will go above and we will go beyond, and when everyone else goes back...
+          </p>
+          <h2 class="my-5">Highlights and Whatnots</h2>
+          <p class="wvu-shout wvu-text-letter-spacing-md wvu-text-letter-spacing-lg wvu-p-max-width fs-1 lh-lg">
+            So we will <span class="wvu-highlight">go above</span> and we will <span class="wvu-highlight">go beyond</span>, and when everyone else goes back... we’ll say “Wait, where did everyone go? <span class="wvu-highlight">Am I in danger?!”</span> Oh, no. Nevermind. I realize I’m at <em>Wings Olé</em> and no one is ever here. Seriously, how does this place stay open?
+          </p>
+          
+          <h2 class="mt-5 mb-4">Patterns</h2>
+    
+          <div class="position-relative mb-4">
+            <div class="wvu-bg-img bg-wvu-gold">
+              <div class="wvu-bg-topo-dark position-absolute h-100 w-100 bg-wvu-accent--old-gold"></div>
+              
+            </div>
+            <div class="row position-relative">
+              <div class="col-xl-4">
+                <div class="p-4">
+                  <h2>So we will <span class="wvu-highlight">go above</span> and we will <span class="wvu-highlight">go beyond</span>, and when everyone else goes back... we’ll say “Wait, where did everyone go? <span class="wvu-highlight">Am I in danger?!”</span> Oh, no. Nevermind. I realize I’m at <em>Wings Olé</em> and no one is ever here. Seriously, how does this place stay open?
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="position-relative mb-4">
+            <div class="wvu-bg-img bg-wvu-gold">
+              {{ $image := "uploads/girls-working-on-computers.jpg" }}
+              {{ $image = resources.Get $image }}
+              {{ $width := $image.Width }}
+              {{ $height := $image.Height }}
+              <img
+                class="object-fit-cover w-100 h-100"
+                src="{{ $image.RelPermalink }}"
+                style="object-position: center;"
+              />
+              <div class="wvu-bg-topo-dark position-absolute h-100 w-100 bg-wvu-accent--blue-light" style="mix-blend-mode: overlay;"></div>
+              
+            </div>
+            <div class="row position-relative">
+              <div class="col-xl-4">
+                <div class="p-4">
+                  <h2>So we will <span class="wvu-highlight">go above</span> and we will <span class="wvu-highlight">go beyond</span>, and when everyone else goes back... we’ll say “Wait, where did everyone go? <span class="wvu-highlight">Am I in danger?!”</span> Oh, no. Nevermind. I realize I’m at <em>Wings Olé</em> and no one is ever here. Seriously, how does this place stay open?
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="position-relative">
+            <div class="wvu-bg-img bg-wvu-gold">
+              {{ $image := "uploads/girls-working-on-computers.jpg" }}
+              {{ $image = resources.Get $image }}
+              {{ $width := $image.Width }}
+              {{ $height := $image.Height }}
+              <img
+                class="object-fit-cover w-100 h-100"
+                src="{{ $image.RelPermalink }}"
+                style="object-position: center;"
+              />
+              <div class="wvu-bg-topo-dark position-absolute h-100 w-100 bg-wvu-accent--blue-light" style="mix-blend-mode: soft-light;"></div>
+              
+            </div>
+            <div class="row position-relative">
+              <div class="col-xl-4">
+                <div class="p-4">
+                  <h2>So we will <span class="wvu-highlight">go above</span> and we will <span class="wvu-highlight">go beyond</span>, and when everyone else goes back... we’ll say “Wait, where did everyone go? <span class="wvu-highlight">Am I in danger?!”</span> Oh, no. Nevermind. I realize I’m at <em>Wings Olé</em> and no one is ever here. Seriously, how does this place stay open?
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <h2 class="mt-5 mb-4">Textures</h2>
+    
+          <div class="position-relative">
+            <div class="wvu-bg-img bg-wvu-gold">
+    
+              <div class="d-flex w-100 h-100 justify-content-between position-absolute">
+                <img class="align-self-end" src="/textures/halftone-grunge-dark.svg" width="400px" />
+                <img class="align-self-start" src="/textures/halftone-grunge-dark.svg" width="400px" style="transform: rotate(180deg);"/>
+              </div>
+              
+            </div>
+            <div class="row position-relative">
+              <div class="col-xl-4">
+                <div class="p-4">
+                  <h2>So we will <span class="wvu-highlight">go above</span> and we will <span class="wvu-highlight">go beyond</span>, and when everyone else goes back... we’ll say “Wait, where did everyone go? <span class="wvu-highlight">Am I in danger?!”</span> Oh, no. Nevermind. I realize I’m at <em>Wings Olé</em> and no one is ever here. Seriously, how does this place stay open?
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <h2 class="mt-5 mb-4">Gradients</h2>
+    
+          <div class="wvu-gradient-blue-light-blue text-wvu-accent--yellow mb-4">
+            <div class="row position-relative">
+              <div class="col-xl-4">
+                <div class="p-4">
+                  <h2>So we will <span class="wvu-highlight">go above</span> and we will <span class="wvu-highlight">go beyond</span>, and when everyone else goes back...
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="wvu-gradient-sunset-light-blue mb-4">
+            <div class="row position-relative">
+              <div class="col-xl-4">
+                <div class="p-4">
+                  <h2>So we will <span class="wvu-highlight">go above</span> and we will <span class="wvu-highlight">go beyond</span>, and when everyone else goes back...
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="wvu-gradient-sunset-gold">
+            <div class="row position-relative">
+              <div class="col-xl-4">
+                <div class="p-4">
+                  <h2>So we will <span class="wvu-highlight">go above</span> and we will <span class="wvu-highlight">go beyond</span>, and when everyone else goes back...
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <h2 class="mt-5 mb-4">Gradients with Type</h2>
+    
+          <h3>Fill</h3>
+    
+          <div class="mb-4">
+            <h2 class="display-1 oliviar-black position-relative text-uppercase wvu-text-echo-outline text-wvu-accent--sunset" data-text="Heading">
+              Heading
+            </h2>
+          </div>
+
+          <div class="mb-4">
+            <h2 class="display-1 oliviar-black position-relative text-uppercase wvu-text-echo-outline text-wvu-accent--sunset ≈" data-text="Heading">
+              Heading
+            </h2>
+          </div>
+
+          <div class="mb-4">
+            <h2 class="display-1 oliviar-black position-relative text-uppercase d-inline-block">
+              <span class="display-1 oliviar-black wvu-text-echo wvu-text-echo-outline d-block" aria-hidden="true">Heading</span>
+              <span class="d-block wvu-text-gradient wvu-gradient-sunset-gold">Heading</span>
+            </h2>
+          </div>
+    
+          <h3>Outline</h3>
+
+          <p>You can use an outlined version of a headline with our display utilities.</p>
+    
+          <h2 class="mt-5 mb-4">Lists</h2>
+    
+          <h3>Steps</h3>
+          <ol class="row list-unstyled wvu-ol-steps-horizontal">
+            <li class="col">
+              <p class="visually-hidden">Step 1</p>
+              <div class="bg-light p-4 fs-4">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+              </div>
+            </li>
+            <li class="col">
+              <p class="visually-hidden">Step 2</p>
+              <div class="bg-light p-4 fs-4">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+              </div>
+            </li>
+            <li class="col">
+              <p class="visually-hidden">Step 3</p>
+              <div class="bg-light p-4 fs-4">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+              </div>
+            </li>
+            <li class="col">
+              <p class="visually-hidden">Step 4</p>
+              <div class="bg-light p-4 fs-4">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+              </div>
+            </li>
+          </ol>
+    
+          <ol class="row list-unstyled wvu-ol-steps-horizontal wvu-ol-steps-horizontal-e">
+            <li class="col">
+              <p class="visually-hidden">Step 1</p>
+              <div class="bg-light p-4 fs-4">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+              </div>
+            </li>
+            <li class="col">
+              <p class="visually-hidden">Step 2</p>
+              <div class="bg-light p-4 fs-4">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+              </div>
+            </li>
+            <li class="col">
+              <p class="visually-hidden">Step 3</p>
+              <div class="bg-light p-4 fs-4">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+              </div>
+            </li>
+            <li class="col">
+              <p class="visually-hidden">Step 4</p>
+              <div class="bg-light p-4 fs-4">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+              </div>
+            </li>
+          </ol>
+          <h2 class="mt-5 mb-4">Borders / Dividers</h2>
+          <h2 class="mt-5 mb-4">Extenders</h2>
+          <h2 class="mt-5 mb-4">Badges</h2>
+          <h2 class="mt-5 mb-4">Transitions</h2>
+          <h2 class="mt-5 mb-4">Application</h2>
+          <div class="position-relative wvu-p-max-width text-white fs-5">
+            <div class="wvu-box-skewed wvu-box-skewed-shadow"></div>
+            <div class="p-3 position-relative">
+              <h2 class="h1 wvu-shout wvu-text-letter-spacing-lg text-wvu-gold">Annual Cost <span class="fs-4">2023-24</span></h2>
+              <p class="row mb-1 align-items-end"><span class="col">In-state tuition and fees:</span><span class="col-md-4 col-xl-3 text-wvu-gold fs-2 oliviar-black">$9,648</span></p>
+              <p class="row mb-1 align-items-end"><span class="col">Nonresident tuition and fees:</span><span class="col-md-4 col-xl-3 text-wvu-gold fs-2 oliviar-black">$27,360</span></p>
+              <p class="row mb-1 align-items-end"><span class="col">Housing and food expenses:</span><span class="col-md-4 col-xl-3 text-wvu-gold fs-2 oliviar-black">$13,020</span></p>
+            </div>
+          </div>
+    
+          <h3 class="mt-5">Profiles</h3>
+          {{ partial "components/sidekicks/profile/profile-experience-001.html" . }}
+          {{ partial "components/sidekicks/profile/profile-experience-002.html" . }}
+    
+          <h3 class="mt-5">Stats</h3>
+          {{ partial "components/sidekicks/stat/stat-experience-001.html" . }}
+    
+          <h3 class="mt-5">Callouts</h3>
+          {{ partial "components/sidekicks/callout/callout-steps.html" . }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+{{ end }}

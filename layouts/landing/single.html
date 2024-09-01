@@ -1,0 +1,19 @@
+{{ define "main" }}
+  <main class="py-5">
+    <div class="container">
+      <h1>{{ .Title }}</h1>
+    </div>
+    {{ .Content }}
+    {{ $examples := .GetPage "headless/index" }}
+    {{ $examples }}
+    {{ range $examples.Pages.ByWeight }}
+      <h2>Examples</h2>
+      {{ $path := printf "%s%s" .File.Dir .File.LogicalName }}
+      {{ with .Site.GetPage $path }}
+        <div class="container">
+          <h2>{{ .Title }}</h2>
+        </div>
+      {{ end }}
+    {{ end }}
+  </main>
+{{ end }}

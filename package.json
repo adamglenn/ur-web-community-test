@@ -1,0 +1,25 @@
+{
+  "name": "ur-web-community",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/wvudigital/ur-web-community.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/wvudigital/ur-web-community/issues"
+  },
+  "homepage": "https://bitbucket.org/wvudigital/ur-web-community#readme",
+  "dependencies": {
+    "@bookshop/browser": "3.10.0",
+    "@bookshop/generate": "3.10.0",
+    "@bookshop/hugo-engine": "3.10.0"
+  }
+}

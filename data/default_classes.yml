@@ -1,0 +1,6 @@
+components:
+  hero:
+    container:
+      width: "container"
+      margin_y: "my-auto"
+      padding_y: "py-6"

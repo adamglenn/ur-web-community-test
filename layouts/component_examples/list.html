@@ -1,0 +1,23 @@
+{{ define "main" }}
+  <main class="py-6">
+    <div class="container">
+      <h1 class="display-3">{{ .Title }}</h1>
+    </div>
+    {{ .Content }}
+    {{ $examples := .GetPage "headless/index" }}
+    <h2>Examples</h2>
+    {{ range $examples.Pages.ByWeight }}
+      {{ $path := printf "%s%s" .File.Dir .File.LogicalName }}
+      {{ with .Site.GetPage $path }}
+        <div class="container">
+          <h2 class="h6 wvu-shout wvu-text-letter-spacing-lg text-muted">{{ .Title }}</h2>
+        </div>
+        <div class="p-5 bg-light border-top border-black-50 border-bottom border-black-50 mb-5">
+          <div class="bg-white">
+            {{ partial "bookshop_partial" (slice "page" .Params.content_blocks) }}
+          </div>
+        </div>
+      {{ end }}
+    {{ end }}
+  </main>
+{{ end }}

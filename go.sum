@@ -1,0 +1,12 @@
+github.com/cloudcannon/bookshop/hugo/v3 v3.10.0 h1:qia8zkLkWFQoh9+I1CcIw6NBObmucsCoEBQtpdGhIjg=
+github.com/cloudcannon/bookshop/hugo/v3 v3.10.0/go.mod h1:s7mIonDhtsLcn10ZKuVXyqd6BDHI8vT1WQhZw8rPfY8=
+github.com/cloudcannon/bookshop/hugo/v3 v3.10.1 h1:GKmbBOhrA2xz7gJDeMqsM+f//SYQ8I+eEAuB3NqDDpM=
+github.com/cloudcannon/bookshop/hugo/v3 v3.10.1/go.mod h1:s7mIonDhtsLcn10ZKuVXyqd6BDHI8vT1WQhZw8rPfY8=
+github.com/wvuweb/wvu-ds-v3-bookshop-components v0.0.0-20240901145004-8ba6cbd31790 h1:ZjZEc9bmv70OqAQvTSA6lqPzJydia5LOpU5rCqXtC8M=
+github.com/wvuweb/wvu-ds-v3-bookshop-components v0.0.0-20240901145004-8ba6cbd31790/go.mod h1:7fiIji8buV0bO6WrCQAv4QGi7wO+soIydri1OsuMkY4=
+github.com/wvuweb/wvu-ds-v3-hugo v0.0.0-20240828022702-9604d90b2c3f h1:HmfoEcg6NN9Yc5J0Tlj5r/nX+EkUaKZpiMhcLBSJ4XY=
+github.com/wvuweb/wvu-ds-v3-hugo v0.0.0-20240828022702-9604d90b2c3f/go.mod h1:liM90vRp0qx3Spgh3xcrKIs3AsLwwYK47zS9mo2XWwc=
+github.com/wvuweb/wvu-ds-v3-hugo v0.0.0-20240829232414-a22ef0e3723a h1:EB+X3EvAWzm3n0rn/PE7jo3838wQzocP5sfg+QLTyNQ=
+github.com/wvuweb/wvu-ds-v3-hugo v0.0.0-20240829232414-a22ef0e3723a/go.mod h1:liM90vRp0qx3Spgh3xcrKIs3AsLwwYK47zS9mo2XWwc=
+github.com/wvuweb/wvu-ds-v3-hugo v0.0.0-20240830013231-a0e9118ca1f7 h1:sb1N+XBwbg8Df8wCrOuofxykWeNq1s4c4uoxG9pt7tY=
+github.com/wvuweb/wvu-ds-v3-hugo v0.0.0-20240830013231-a0e9118ca1f7/go.mod h1:liM90vRp0qx3Spgh3xcrKIs3AsLwwYK47zS9mo2XWwc=

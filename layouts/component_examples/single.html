@@ -1,0 +1,24 @@
+{{ define "main" }}
+  <main class="py-5">
+    <div class="container">
+      <h1>{{ .Title }}</h1>
+    </div>
+    {{ .Content }}
+    {{ $examples := .GetPage "headless/index" }}
+    {{ $examples }}
+    {{ range $examples.Pages.ByWeight }}
+      <h2>Examples</h2>
+      {{ $path := printf "%s%s" .File.Dir .File.LogicalName }}
+      {{ with .Site.GetPage $path }}
+        <div class="container">
+          <h2>{{ .Title }}</h2>
+        </div>
+        <div class="p-4 bg-light">
+          <div class="bg-white">
+            {{ partial "bookshop_partial" (slice "page" .Params.content_blocks) }}
+          </div>
+        </div>
+      {{ end }}
+    {{ end }}
+  </main>
+{{ end }}
