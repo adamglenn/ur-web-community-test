@@ -11,9 +11,9 @@ module:
   - path: github.com/wvuweb/wvu-ds-v3-bookshop-components
     mounts:
     - source: component-library
-      target: layouts/partials/bookshop
+      target: layouts/partials/bookshop/
     - source: component-library
-      target: assets/bookshop
+      target: assets/bookshop/
   replacements:
     - "components.local -> ../component-library"
 markup:
