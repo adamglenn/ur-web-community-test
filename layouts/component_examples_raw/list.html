@@ -1,0 +1,9 @@
+{{ define "main" }}
+  {{ $examples := .GetPage "headless/index" }}
+  {{ range $examples.Pages.ByWeight }}
+    {{ $path := printf "%s%s" .File.Dir .File.LogicalName }}
+    {{ with .Site.GetPage $path }}
+      {{ .Content | safeHTML }}
+    {{ end }}
+  {{ end }}
+{{ end }}

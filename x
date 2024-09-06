@@ -1,0 +1,55 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Web Community'
+designSystemMenu = 'design_system'
+cmsMenu = 'cms'
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[[menus.main]]
+name = 'Request A Site'
+pageRef = '/request-a-site'
+weight = 20
+
+[[menus.main]]
+name = 'Content Strategy'
+pageRef = '/content-strategy'
+weight = 30
+
+[[menus.main]]
+name = 'Content Managers'
+pageRef = '/content-managers'
+weight = 40
+
+[[menus.main]]
+name = 'Designers and Developers'
+pageRef = '/designers-and-developers'
+weight = 50
+
+[[menus.main]]
+name = 'Design System'
+pageRef = '/design-system'
+weight = 60
+
+[[menus.main]]
+name = 'CMS'
+pageRef = '/cms'
+weight = 70
+
+[[menus.main]]
+name = 'FAQs'
+pageRef = '/faqs'
+weight = 80
+
+[module]
+replacements = 'github.com/wvuweb/wvu-ds-v3-hugo -> ../../wvu-ds-v3-hugo, components.local -> ../component-library'
+
+[[module.imports]]
+path = 'github.com/wvuweb/wvu-ds-v3-hugo'
+
+[[module.imports]]
+path = 'components.local'
+
+[[module.imports]]
+path = 'github.com/cloudcannon/bookshop/hugo/v3'

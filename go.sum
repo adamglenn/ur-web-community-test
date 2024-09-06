@@ -10,6 +10,10 @@ github.com/wvuweb/wvu-ds-v3-bookshop-components v0.0.0-20240901174002-79a7f0b466
 github.com/wvuweb/wvu-ds-v3-bookshop-components v0.0.0-20240901174002-79a7f0b4665d/go.mod h1:JokLtYAF9QQKBQAVauwTKMoCxcvPhZz6OrKEK5xOvlw=
 github.com/wvuweb/wvu-ds-v3-bookshop-components v0.0.0-20240901194847-93a10397ea5c h1:m7DyL5riWQJbO49bwaX/PWHVZFNBG0F8ZazkAxrzcws=
 github.com/wvuweb/wvu-ds-v3-bookshop-components v0.0.0-20240901194847-93a10397ea5c/go.mod h1:JokLtYAF9QQKBQAVauwTKMoCxcvPhZz6OrKEK5xOvlw=
+github.com/wvuweb/wvu-ds-v3-bookshop-components v0.0.0-20240901211842-38e1502cf6e8 h1:ndDTWSFUTI5gMKZdpFGDlDxeNaKdugCxK++sJNHX4VI=
+github.com/wvuweb/wvu-ds-v3-bookshop-components v0.0.0-20240901211842-38e1502cf6e8/go.mod h1:JokLtYAF9QQKBQAVauwTKMoCxcvPhZz6OrKEK5xOvlw=
+github.com/wvuweb/wvu-ds-v3-bookshop-components v0.0.0-20240906164649-0c489166fbbb h1:71+sZxRXKew0bu+spTYh20f55iL5gU/dP4QidIOkfUU=
+github.com/wvuweb/wvu-ds-v3-bookshop-components v0.0.0-20240906164649-0c489166fbbb/go.mod h1:JokLtYAF9QQKBQAVauwTKMoCxcvPhZz6OrKEK5xOvlw=
 github.com/wvuweb/wvu-ds-v3-hugo v0.0.0-20240828022702-9604d90b2c3f h1:HmfoEcg6NN9Yc5J0Tlj5r/nX+EkUaKZpiMhcLBSJ4XY=
 github.com/wvuweb/wvu-ds-v3-hugo v0.0.0-20240828022702-9604d90b2c3f/go.mod h1:liM90vRp0qx3Spgh3xcrKIs3AsLwwYK47zS9mo2XWwc=
 github.com/wvuweb/wvu-ds-v3-hugo v0.0.0-20240829232414-a22ef0e3723a h1:EB+X3EvAWzm3n0rn/PE7jo3838wQzocP5sfg+QLTyNQ=

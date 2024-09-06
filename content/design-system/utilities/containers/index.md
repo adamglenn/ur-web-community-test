@@ -11,9 +11,22 @@ Test.
 
 ## Trapezoid
 
-{{< readfile file="headless/box-skewed-1.html" >}}
+{{< readfile file="headless/box-skewed-1.html" label="Box Skewed 1" >}}
 
 {{< readfile-code file="headless/box-skewed-1.html" code="true" >}}
+
+{{< readfile file="headless/box-skewed-2.html" label="Box Skewed 2" >}}
+
+{{< readfile-code file="headless/box-skewed-2.html" code="true" >}}
+
+{{< readfile file="headless/box-skewed-3.html" label="Box Skewed 3" >}}
+
+{{< readfile-code file="headless/box-skewed-3.html" code="true" >}}
+
+{{< readfile file="headless/box-skewed-4.html" label="Box Skewed 4" >}}
+
+{{< readfile-code file="headless/box-skewed-4.html" code="true" >}}
+
 
 {{< readfile file="headless/box-skewed-1-clip.html" >}}
 
