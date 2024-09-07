@@ -100,6 +100,11 @@ _enabled_editors:
   - visual
   - content
   - data
+_inputs:
+  type:
+    type: auto
+    hidden: true
+    cascade: true
 _editables:
   content:
     allow_custom_markup: false
