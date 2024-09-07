@@ -14,6 +14,8 @@ paths:
   config: ''
 collections_config:
   pages:
+    _enabled_editors:
+      - visual
     path: content
     description: Pages description
     output: true
@@ -28,17 +30,31 @@ collections_config:
         remove_empty_inputs: false
         remove_extra_inputs: true
         new_preview_url: /
-  # articles:
-  #   _enabled_editors:
-  #     - visual
+  articles:
+    _enabled_editors:
+      - visual
+    path: articles
+    description: Articles description
+    output: true
+    disable_add: false
+    disable_add_folder: false
+    disable_add_file_actions: false
+    schemas:
+      page:
+        path: .cloudcannon/schemas/article.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: true
+        new_preview_url: /
   # detail_pages:
   #   _enabled_editors:
   #     - visual
   # faculty:
   # guide_pages:
-  # home_page:
-  #   _enabled_editors:
-  #     - visual
+  home_page:
+    _enabled_editors:
+      - visual
   # news:
   # places_and_spaces:
   # profiles:
@@ -101,6 +117,9 @@ _enabled_editors:
   - content
   - data
 _inputs:
+  publish_date:
+    type: date
+    instance_value: NOW
   type:
     type: auto
     hidden: true
