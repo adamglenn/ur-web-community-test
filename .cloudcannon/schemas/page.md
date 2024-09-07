@@ -1,6 +1,6 @@
 ---
 title:
-_type: detail_page
+type:
 description:
 meta:
   social_image:

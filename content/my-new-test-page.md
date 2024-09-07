@@ -1,7 +1,7 @@
 ---
 _schema: page
 title: My New Test Page
-_type: detail_page
+type: detail_page
 description: Test Description Test.
 meta:
   social_image:
