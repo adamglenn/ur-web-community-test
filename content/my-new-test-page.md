@@ -5,6 +5,7 @@ type: article
 description: Test Description Test.
 meta:
   social_image:
+article_blocks:
 content_blocks:
   - _bookshop_name: section/hero-test
     text: Hello, world!
