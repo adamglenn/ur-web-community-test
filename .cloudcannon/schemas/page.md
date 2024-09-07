@@ -4,5 +4,6 @@ type:
 description:
 meta:
   social_image:
+article_blocks:
 content_blocks:
 ---
