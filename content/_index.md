@@ -18,7 +18,7 @@ content_blocks:
       align: left
       vertical_space: py-8
     styles:
-      vibe: down-to-business-1
+      vibe: wvu-experience-1
       background_c: bg-wvu-gold
       bg_image_blend_mode: normal
       text_c: text-dark
@@ -35,4 +35,4 @@ content_blocks:
       - page: content/cms/_index.md
       - page: content/design-system/components/_index.md
 ---
-Test. Hi. Yo. Lf
+Test. Hi. Yo.

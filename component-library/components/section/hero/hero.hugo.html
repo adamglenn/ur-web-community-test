@@ -13,7 +13,7 @@
 {{ if and .styles .styles.text_c }}{{ $textColor = .styles.text_c }}{{ end }}
 
 {{ if and .content.background_image .content.background_image.image }}{{ $image = .content.background_image.image }}{{ end }}
-{{ if and .content.background_image .content.background_image.alt }}{{ $image = .content.background_image.alt }}{{ end }}
+{{ if and .content.background_image .content.background_image.alt }}{{ $alt = .content.background_image.alt }}{{ end }}
 
 {{ if and .styles .styles.vibe }}
   {{ if eq .styles.vibe "wvu-experience-1" }}
