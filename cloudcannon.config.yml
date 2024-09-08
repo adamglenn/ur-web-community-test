@@ -117,10 +117,10 @@ _enabled_editors:
   - content
   - data
 _inputs:
-  page_collection_items:
-    type: array
-    options:
-      structures: _structures.page_collection_item
+  # page_collection_items:
+  #   type: array
+  #   options:
+  #     structures: _structures.page_collection_item
   publish_date:
     type: date
     instance_value: NOW
@@ -128,15 +128,14 @@ _inputs:
     type: auto
     hidden: true
     cascade: true
-_structures:
-  page_collection_item:
-    style: modal
-    values:
-      - label: Page
-        _inputs:
-          page:
-            type: select
-            values: collections.pages
+# _structures:
+#   page_collection_item:
+#     values:
+#       - label: Page
+#         _inputs:
+#           page:
+#             type: select
+#             values: collections.pages
 _editables:
   content:
     allow_custom_markup: false
