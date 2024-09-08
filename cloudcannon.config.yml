@@ -20,7 +20,6 @@ collections_config:
     description: Pages description
     output: true
     filter: 
-      base: strict
       exclude:
         - "[*].html"
     parse_branch_index: true
