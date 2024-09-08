@@ -5,9 +5,6 @@
     <div class="row">
       {{ if site.Params.env_bookshop_live }}
         <p>I am being edited live! Test.</p>
-        {{ range site.RegularPages }}
-          {{ .RelPermalink }}
-        {{ end }}
       {{ else }}
         {{ range .page_collection_items }}          
           {{ $page := replace .page "content/" "" }}
