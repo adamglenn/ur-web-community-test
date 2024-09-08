@@ -3,18 +3,20 @@
     <h2>Page Collection Test</h2>
     <p>{{ .text }}</p>
     <div class="row">
-      {{ range .page_collection_items }}
-        <div class="col">
-          {{ if site.Params.env_bookshop_live }}
-            <p>I am being edited live!</p>
-            <h3>Fallback {{ .page }} title</h3>
-          {{ else }}
-            {{ $page := replace .page "content/" "" }}
-            {{ with site.GetPage $page }}
+      {{ if site.Params.env_bookshop_live }}
+        <p>I am being edited live!</p>
+        {{ range site.RegularPages }}
+          {{ .RelPermalink }}
+        {{ end }}
+      {{ else }}
+        {{ range .page_collection_items }}          
+          {{ $page := replace .page "content/" "" }}
+          {{ with site.GetPage $page }}
+            <div class="col">
               <h3>{{ .Title }}</h3>
-            {{ end }}
+            </div>
           {{ end }}
-        </div>
+        {{ end }}
       {{ end }}
     </div>
   </div>
