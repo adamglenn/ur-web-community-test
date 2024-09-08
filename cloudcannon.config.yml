@@ -21,6 +21,7 @@ collections_config:
     output: true
     filter: 
       base: strict
+      include: "[*].md"
     parse_branch_index: true
     disable_add: false
     disable_add_folder: false
