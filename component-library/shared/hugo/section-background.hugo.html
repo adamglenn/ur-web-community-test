@@ -1,0 +1,21 @@
+<div class="wvu-bg-img">
+  {{ if .image }}
+    {{ $image := .image }}
+    {{ if not site.Params.env_bookshop_live }}
+      {{ $image = resources.Get .image }}
+      {{ if and $image (ne $image.MediaType.SubType "svg") }}
+        {{ $image = ($image.Fit "1920x1200 center webp")}}
+      {{ end }}
+    {{ end }}
+    <img class="object-fit-cover w-100 {{ .styles.section.blend_mode }}" width="1920px" height="1200px" src="{{ $image }}" />
+  {{ end }}
+  {{ if .styles.background_layers.pattern }}
+    <div class="{{ .styles.background_layers.pattern.option }} {{ .styles.background_layers.pattern.color }}" style="opacity: 0.{{ .styles.background_layers.pattern.opacity }}"></div>
+  {{ end }}
+  {{ if eq .styles.background_layers.texture.enable true }}
+    <div class="d-flex w-100 h-100 justify-content-between position-absolute">
+      <img class="align-self-end" src="/textures/halftone-grunge-dark.svg" width="400px" />
+      <img class="align-self-start" src="/textures/halftone-grunge-dark.svg" width="400px" style="transform: rotate(180deg);"/>
+    </div>
+  {{ end }}
+</div>
