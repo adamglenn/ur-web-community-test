@@ -1,6 +1,16 @@
 <section>
-  <p>{{ .text }}</p>
-  {{ range .page_collection_items }}
-    {{ . }}
-  {{ end }}
+  <div class="container">
+    <h2>Page Collection Test</h2>
+    <p>{{ .text }}</p>
+    {{ range .page_collection_items }}
+      {{ if site.Params.env_bookshop_live }}
+        <p>I am being edited live!</p>
+        <h3>Fallback {{ .page }} title</h3>
+      {{ else }}
+        {{ with .Site.GetPage .page }}
+          <h3>{{ .Title }}</h3>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </div>
 </section>
