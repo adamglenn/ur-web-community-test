@@ -21,7 +21,8 @@ collections_config:
     output: true
     filter: 
       base: strict
-      exclude: "*.html"
+      exclude:
+        - "*.html"
     parse_branch_index: true
     disable_add: false
     disable_add_folder: false
