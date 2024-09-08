@@ -25,6 +25,8 @@ _structures:
   page_collection_item:
     values:
       - label: Page
+        value:
+          page:
         _inputs:
           page:
             type: select
