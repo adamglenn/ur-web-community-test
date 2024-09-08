@@ -1,4 +1,5 @@
 {{ $image := .image }}
+{{ $image }}
 <div class="wvu-bg-img">
   {{ if not site.Params.env_bookshop_live }}
     {{ $image = resources.Get $image }}
