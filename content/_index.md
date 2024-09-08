@@ -27,7 +27,7 @@ content_blocks:
       heading_extras:
       ctas: buttons
   - _bookshop_name: section/hero-test
-    text: Hello, world! Test.
+    text: Hello, world!
   - _bookshop_name: section/page-collection
     text: Hello World!
     page_collection_items:
