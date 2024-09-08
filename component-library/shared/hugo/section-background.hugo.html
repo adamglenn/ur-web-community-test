@@ -1,14 +1,12 @@
+{{ $image := .image }}
 <div class="wvu-bg-img">
-  {{ if .image }}
-    {{ $image := .image }}
-    {{ if not site.Params.env_bookshop_live }}
-      {{ $image = resources.Get $image }}
-      {{ if and $image (ne $image.MediaType.SubType "svg") }}
-        {{ $image = ($image.Fit "1920x1200 center webp").RelPermalink }}
-      {{ end }}
+  {{ if not site.Params.env_bookshop_live }}
+    {{ $image = resources.Get $image }}
+    {{ if and $image (ne $image.MediaType.SubType "svg") }}
+      {{ $image = ($image.Fit "1920x1200 center webp").RelPermalink }}
     {{ end }}
-    <img class="object-fit-cover w-100 {{ .styles.section.blend_mode }}" width="1920px" height="1200px" src="{{ $image }}" />
   {{ end }}
+  <img class="object-fit-cover w-100 {{ .styles.section.blend_mode }}" width="1920px" height="1200px" src="{{ $image }}" />
   {{ if .styles.background_layers.pattern }}
     <div class="{{ .styles.background_layers.pattern.option }} {{ .styles.background_layers.pattern.color }}" style="opacity: 0.{{ .styles.background_layers.pattern.opacity }}"></div>
   {{ end }}
