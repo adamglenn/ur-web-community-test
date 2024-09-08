@@ -4,7 +4,7 @@ content_blocks:
   - _bookshop_name: section/hero
     content:
       background_image:
-        image:
+        image: /uploads/11-rock-climber.jpg
         alt: Student climbing on rock
       heading: My Cool Heading
       lead:
