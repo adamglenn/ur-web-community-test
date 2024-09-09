@@ -22,7 +22,7 @@ collections_config:
     # filter: 
     #   exclude:
     #     - .html
-    parse_branch_index: true
+    # parse_branch_index: true
     disable_add: false
     disable_add_folder: false
     disable_add_file_actions: false
@@ -43,7 +43,6 @@ collections_config:
     # filter: 
     #   exclude:
     #     - .html
-    parse_branch_index: true
     disable_add: false
     disable_add_folder: false
     disable_add_file_actions: false
