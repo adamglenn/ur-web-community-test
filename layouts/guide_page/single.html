@@ -1,4 +1,4 @@
 {{ define "main" }}
-  {{ partial "bookshop_bindings" `.Params.content_blocks` }}
-  {{ partial "bookshop_partial" (slice "page" .Params.content_blocks) }}
+  {{ partial "bookshop_bindings" `.Params.guide_blocks` }}
+  {{ partial "bookshop_partial" (slice "page" .Params.guide_blocks) }}
 {{ end }}
