@@ -152,17 +152,6 @@ _inputs:
     type: auto
     hidden: true
     cascade: true
-  page_template:
-    type: select
-    options:
-      values:
-        - detail
-        - guide
-        - pathway
-  content_blocks:
-    hidden: !page_template.guide
-  detail_blocks:
-    hidden: !page_template.detail
 # _structures:
 #   page_collection_item:
 #     values:
