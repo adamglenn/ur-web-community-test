@@ -19,10 +19,10 @@ collections_config:
     path: content
     description: Pages description
     output: true
-    # filter: 
-    #   exclude:
-    #     - .html
-    # parse_branch_index: true
+    filter: 
+      exclude:
+        - [*].html
+    parse_branch_index: true
     disable_add: false
     disable_add_folder: false
     disable_add_file_actions: false
