@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <header class="bg-wvu-blue">
+    {{ partial "header" . }}
+  </header>
+  {{ if eq .Params.page_template "detail" }}
+    {{ partial "bookshop_bindings" `.Params.detail_blocks` }}
+    {{ partial "bookshop_partial" (slice "page" .Params.detail_blocks) }}
+  {{ else if eq .Params.page_template "guide" }}
+    {{ partial "bookshop_bindings" `.Params.content_blocks` }}
+    {{ partial "bookshop_partial" (slice "page" .Params.content_blocks) }}
+  {{ else }}
+    {{ partial "bookshop_bindings" `.Params.detail_blocks` }}
+    {{ partial "bookshop_partial" (slice "page" .Params.detail_blocks) }}
+  {{ end }}
+  {{ partial "footer" . }}
+{{ end }}

@@ -1,6 +1,7 @@
 ---
 title:
 type:
+url:
 description:
 meta:
   social_image:

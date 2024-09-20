@@ -2,7 +2,3 @@ github.com/cloudcannon/bookshop/hugo/v3 v3.10.1 h1:GKmbBOhrA2xz7gJDeMqsM+f//SYQ8
 github.com/cloudcannon/bookshop/hugo/v3 v3.10.1/go.mod h1:s7mIonDhtsLcn10ZKuVXyqd6BDHI8vT1WQhZw8rPfY8=
 github.com/wvuweb/wvu-ds-v3-bookshop-components v0.0.0-20240906220059-3130fd6de99c h1:hA23bK0T4eFJ/54QJESBixJwCNGPZPGwCLFUNRbA2M4=
 github.com/wvuweb/wvu-ds-v3-bookshop-components v0.0.0-20240906220059-3130fd6de99c/go.mod h1:JokLtYAF9QQKBQAVauwTKMoCxcvPhZz6OrKEK5xOvlw=
-github.com/wvuweb/wvu-ds-v3-hugo v0.0.0-20240908194345-dc44a329badd h1:m+0Lg+RifjlewSzp+3rRbK54F0HgcRHBbSJ0mXxzdGE=
-github.com/wvuweb/wvu-ds-v3-hugo v0.0.0-20240908194345-dc44a329badd/go.mod h1:liM90vRp0qx3Spgh3xcrKIs3AsLwwYK47zS9mo2XWwc=
-github.com/wvuweb/wvu-ds-v3-hugo v0.0.0-20240908194549-3501cb4a58b1 h1:bqnNqMStOQZB9uXbKqAOAmGq11RgRK5qeIB073aijT0=
-github.com/wvuweb/wvu-ds-v3-hugo v0.0.0-20240908194549-3501cb4a58b1/go.mod h1:liM90vRp0qx3Spgh3xcrKIs3AsLwwYK47zS9mo2XWwc=

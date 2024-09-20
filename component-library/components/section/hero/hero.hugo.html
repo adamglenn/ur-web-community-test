@@ -1,63 +1,62 @@
-{{ $backgroundColor := "bg-dark" }}
-{{ $textColor := "text-dark" }}
-{{ $image := "" }}
+{{ $backgroundImage := "" }}
+{{ $backgroundImageAlt := "" }}
 {{ $blendMode := "" }}
-{{ $alt := "" }}
-{{ $vibe := "" }}
-{{ $headingStyles := "" }}
-{{ $headingExtras := "" }}
-{{ $leadStyles := "" }}
-{{ $bodyStyles := "" }}
+{{ $foregroundImage := "" }}
+{{ $foregroundImageAlt := "" }}
+{{ $justifyContent := "justify-content-start" }}
+{{ $cols := "col-xl-10" }}
+{{ $padding := "py-8" }}
+{{ $thickBorder := false }}
+{{ $ctas := "buttons" }}
+{{ $showNumber := false }}
+{{ $section := "" }}
+{{ $contentContainer := "" }}
+{{ $heading := "display-2 wvu-shout" }}
+{{ $lead := "lead" }}
+{{ $body := "" }}
+{{ $buttons := "btn-primary" }}
+{{ $firstButton := "" }}
+{{ $list := "wvu-ul-chevrons" }}
 
-{{ if and .styles .styles.background_c }}{{ $backgroundColor = .styles.background_c }}{{ end }}
-{{ if and .styles .styles.text_c }}{{ $textColor = .styles.text_c }}{{ end }}
+{{ if and .background_image .background_image.image }}{{ $backgroundImage = .background_image.image }}{{ end }}
+{{ if and .background_image .background_image.alt }}{{ $backgroundImageAlt = .background_image.alt }}{{ end }}
+{{ if and .foreground_image .foreground_image.image }}{{ $foregroundImage = .foreground_image.image }}{{ end }}
+{{ if and .foreground_image .foreground_image.alt }}{{ $foregroundImageAlt = .foreground_image.alt }}{{ end }}
 
-{{ if and .content.background_image .content.background_image.image }}{{ $image = .content.background_image.image }}{{ end }}
-{{ if and .content.background_image .content.background_image.alt }}{{ $alt = .content.background_image.alt }}{{ end }}
-
-{{ if and .styles .styles.vibe }}
-  {{ if eq .styles.vibe "wvu-experience-1" }}
-    {{ $headingStyles = "oliviar-black text-uppercase" }}
-    {{ $leadStyles = "h3 iowan-old-style-black-italic" }}
-  {{ else if eq .styles.vibe "down-to-business-1" }}
-    {{ $headingStyles = "wvu-shout" }}
-    {{ $leadStyles = "h3 iowan-old-style-black-italic" }}
-  {{ else if eq .styles.vibe "nostalgic-1" }}
-    {{ $headingStyles = "oliviar-black" }}
-    {{ $leadStyles = "h3 helvetica-neue-light" }}
-  {{ else }}
-    {{ $headingStyles = "display-2 wvu-shout text-uppercase" }}
-    {{ $leadStyles = "h4 helvetica-neue-light" }}
+<main class="position-relative {{ $section }}">
+  {{ if eq .layout.show_number true }}
+    <div class="display-0 wvu-shout wvu-text-outline text-wvu-gold position-absolute wvu-z-index-max" style="font-size: 30rem !important; bottom: 0;">
+      <p class="ms-n4 mb-n5">14</p>
+    </div>
   {{ end }}
-{{ end }}
-
-{{ if and .styles .styles.heading_extras }}
-  {{ $headingExtras = .styles.heading_extras }}
-{{ end }}
-
-<main id="{{ .config.id }}" class="position-relative py-8 {{ .styles.background_c }} {{ .styles.text_c }}" aria-labelledby="{{ .config.aria_labelledby }}-label">
-  {{ partial "bookshop_partial" (slice "section-background" (dict "image" $image "blendMode" $blendMode "alt" $alt)) }}
-  <div class="container position-relative {{ .layout.padding_y }}">
-    <div class="row">
-      <div class="col col-md-14 col-xl-12">
-        <div>
-          <h2 id="{{ .config.aria_labelledby }}-label" class="{{ .styles.heading_size }} {{ .styles.heading_c }} {{ $headingStyles }} {{ range .styles.heading_extras }}{{ . }} {{ end }} mb-3" data-text="{{ .content.heading }}">{{ .content.heading }}</h2>
-
-          {{ if .content.lead }}
-            {{ partial "bookshop" (slice "generic/lead" (dict "text" .content.lead "styles" $leadStyles)) }}
-          {{ end }}
-  
-          {{ if .content.body }}
-            <div class="{{ $bodyStyles }}">
-              {{ .content.body | markdownify }}
-            </div>
-          {{ end }}
-  
-          {{ if .content.ctas }}
-            {{ range .content.ctas }}
-              CTA
+  {{ partial "bookshop_partial" (slice "section-foreground" (dict "image" $foregroundImage "align" $justifyContent "alt" $backgroundImageAlt)) }}
+  <div class="{{ $padding }} position-relative {{ if eq .styles.thick_border true }}m-6{{ end }}">
+    {{ partial "bookshop_partial" (slice "section-background" (dict "image" $backgroundImage "blendMode" $blendMode "alt" $foregroundImageAlt)) }}
+    <!--
+    <div class="wvu-bg-img">
+      <div class="position-absolute w-50 h-100 d-flex justify-content-start align-items-end" style="left: 50%">
+        <div class="wvu-light-angle-blur-accent--sunset"></div>
+      </div>
+    </div>
+    -->
+    <div class="container wvu-z-index-content">
+      <div class="row {{ $justifyContent }}">
+        <div class="{{ $cols }}">
+          <div class="">
+            <h1 class="{{ $heading }} mb-4" data-content="{{ .heading }}">{{ .heading }}</h1>
+            {{ if .lead }}
+              <p class="{{ $lead }}">{{ .lead }}</p>
             {{ end }}
-          {{ end }}
+            {{ if .body }}
+              <div class="{{ $body }} mb-4">
+                {{ .body | markdownify }}
+              </div>
+            {{ end }}
+            {{ partial "bookshop" (slice "simple/ctas" .ctas) }}
+            {{ if .postscript }}
+              {{ .postscript | markdownify }}
+            {{ end }}
+          </div>
         </div>
       </div>
     </div>

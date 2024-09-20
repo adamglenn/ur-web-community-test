@@ -1,9 +1,9 @@
 {{ $image := .image }}
-<div class="wvu-bg-img">
+<div class="wvu-bg-img align-items-center">
   {{ if not site.Params.env_bookshop_live }}
     {{ $image = resources.Get $image }}
     {{ if and $image (ne $image.MediaType.SubType "svg") }}
-      {{ $image = ($image.Fit "1920x1200 center webp").RelPermalink }}
+      {{ $image = ($image.Fit "1920x1200 webp Center").RelPermalink }}
     {{ end }}
   {{ end }}
   <img class="object-fit-cover w-100 {{ .styles.section.blend_mode }}" width="1920px" height="1200px" src="{{ $image }}" />

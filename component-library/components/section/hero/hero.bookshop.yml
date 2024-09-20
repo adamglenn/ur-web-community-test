@@ -9,93 +9,45 @@ spec:
 
 # Defines the structure of this component, as well as the default values
 blueprint:
-  content:
-    background_image:
-      image:
-      alt:
-    heading:
-    lead:
-    body:
-    ctas:
+  background_image:
+    image:
+    alt:
+  heading: Lorem Ipsum Dolor Sit Amet
+  lead: Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  body:
+  ctas:
+    - text: Call to Action
+      associate_link:
+      external_link:
   config:
     is_main: false
-    id:
-    aria_labelledby:
+    id: hero
+    aria_labelledby: hero-1-label
   layout:
-    align: left
-    vertical_space: py-8
-  styles:
-    vibe: down-to-business-1
-    background_c: bg-dark
-    bg_image_blend_mode: normal
-    text_c: text-white
-    heading_size: display-2
-    heading_c: text-white
-    heading_extras:
+    justify_content: justify-content-start
+    cols: col-xl-10
+    padding: py-8
+    thick_border: false
     ctas: buttons
+    show_number: false
+  styles:
+    section: 
+    content_container: normal
+    heading: display-2 wvu-shout
+    lead: lead
+    body:
+    buttons: btn-primary
+    first_button:
+    list: wvu-ul-chevrons
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
-  background_c:
-    label: Background Color
-    type: select
-    options:
-      allow_empty: false
-      values:
-      - name: Dark
-        id: bg-dark
-      - name: WVU Gold
-        id: bg-wvu-gold
-  heading_size:
-    label: Heading Size
-    type: select
-    options:
-      allow_empty: false
-      values:
-      - name: Display 1
-        id: display-1
-      - name: Display 2
-        id: display-2
-  heading_c:
-    label: Heading Color
-    type: select
-    options:
-      allow_empty: false
-      values:
-      - name: Dark
-        id: text-dark
-      - name: White
-        id: text-white
-      - name: WVU Gold
-        id: text-wvu-gold
-      - name: Sunset to Light Blue
-        id: wvu-text-gradient wvu-gradient-sunset-light-blue
-  heading_extras:
-    label: Heading Extras
-    type: multiselect
-    options:
-      allow_empty: true
-      values:
-      - name: Echo Outline
-        id: wvu-text-echo-outline
-      - name: Echo Shadow
-        id: wvu-text-echo-shadow
-  text_c:
-    label: Text Color
-    type: select
-    options:
-      allow_empty: false
-      values:
-      - name: Dark
-        id: text-dark
-      - name: White
-        id: text-white
-      - name: WVU Gold
-        id: text-wvu-gold
-  vibe:
+  layout:
     hidden: true
-  bg_image_blend_mode:
+    cascade: true
+  styles:
     hidden: true
+    cascade: true

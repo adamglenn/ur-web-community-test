@@ -1,14 +1,33 @@
 {{ define "main" }}
-  <div class="container">
-    <div class="col-6">
-      Jump Links
+  <header class="bg-wvu-blue">
+    {{ partial "header" . }}
+  </header>
+  <header class="pt-2 pb-4">
+    <div class="container">
+      {{ partial "breadcrumbs" . }}
+      <div class="pt-6">
+        <span class="d-block wvu-gradient-sunset-gold wvu-bleed-left mb-3" style="height: 2px; width: 200px;"></span>
+        <h1 class="display-2 iowan-old-style">{{ .Page.Title }}</h1>
+      </div>
     </div>
-    <div class="col-12">
-      {{ partial "bookshop_bindings" `.Params.detail_blocks` }}
-      {{ partial "bookshop_partial" (slice "page" .Params.detail_blocks) }}
+  </header>
+  <main class="py-6">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div class="sticky-top pt-5 mt-n5">
+            Jump Links
+          </div>
+        </div>
+        <div class="col-12">
+          {{ partial "bookshop_bindings" `.Params.detail_blocks` }}
+          {{ partial "bookshop_partial" (slice "page" .Params.detail_blocks) }}
+        </div>
+        <div class="col-6">
+          Sidebar
+        </div>
+      </div>
     </div>
-    <div class="col-6">
-      Sidebar
-    </div>
-  </div>
+  </main>
+  {{ partial "footer" . }}
 {{ end }}

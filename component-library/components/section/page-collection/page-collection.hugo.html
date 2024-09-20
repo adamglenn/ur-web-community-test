@@ -1,8 +1,50 @@
-<section>
-  <div class="container">
-    <h2>Page Collection Test</h2>
-    <p>{{ .text }}</p>
-    <div class="row">
+<section class="pt-9 pb-6 position-relative">
+  <!-- 
+  <div class="wvu-bg-img">
+    <div class="position-absolute w-50 h-100 d-flex justify-content-start align-items-end" style="left: 50%">
+      <div class="h-100 position-absolute" style="content: ''; transform: skew(340deg); left: 0; width: 200% !important; background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0) 100%);"></div>
+    </div>
+  </div>
+  -->
+  <div class="container position-relative mb-n9">
+    <div class="row text-center mb-5">
+      <div class="col-xl-12 mx-xl-auto">
+        <h2 class="h1 helvetica-neue-condensed-black text-uppercase wvu-text-letter-spacing-lg text-wvu-accent--blue-dark">Let Us Be Your Guide</h2>
+        <p class="lead text-wvu-accent--blue-dark">{{ .text }}</p>
+      </div>
+    </div>
+    
+    <div class="row gx-4 text-center">
+      <div class="col">
+        <div class="bg-wvu-accent--blue-dark text-white px-5 py-6 rounded-2 h-100">
+          <h3 class="iowan-old-style h1 text-wvu-accent--blue-light">Future Students</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+          <span class="fa-thin fa-arrow-circle-right display-4 text-wvu-accent--blue-light"></span>
+        </div>
+      </div>
+      <div class="col">
+        <div class="bg-wvu-accent--blue-dark text-white px-5 py-6 rounded-2 h-100">
+          <h3 class="iowan-old-style h1 text-wvu-accent--sunset">Admitted Students</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+          <span class="fa-thin fa-arrow-circle-right display-4 text-wvu-accent--sunset"></span>
+        </div>
+      </div>
+      <div class="col">
+        <div class="bg-wvu-accent--blue-dark text-white px-5 py-6 rounded-2 h-100">
+          <h3 class="iowan-old-style h1 text-wvu-accent--yellow">Families</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+          <span class="fa-thin fa-arrow-circle-right display-4 text-wvu-accent--yellow"></span>
+        </div>
+      </div>
+      <div class="col">
+        <div class="bg-wvu-accent--blue-dark text-white px-5 py-6 rounded-2 h-100">
+          <h3 class="iowan-old-style h1 text-wvu-neutral--cream">Graduate School</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+          <span class="fa-thin fa-arrow-circle-right display-4 text-wvu-neutral--cream"></span>
+        </div>
+      </div>
+      <!--
       {{ if site.Params.env_bookshop_live }}
         {{ range .page_collection_items }} 
           <div class="col">
@@ -14,14 +56,15 @@
           {{ $page := replace .page "content/" "" }}
           {{ with site.GetPage $page }}
             <div class="col">
-              <h3>{{ .Title }}</h3>
+              <div class="bg-wvu-accent--blue-dark text-white px-5 py-6 rounded-2">
+                <h3 class="iowan-old-style h1">{{ .Title }}</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+              </div>
             </div>
           {{ end }}
         {{ end }}
       {{ end }}
-      {{ range site.RegularPages }}
-        {{ .RelPermalink }}
-      {{ end }}
+          -->
     </div>
   </div>
 </section>

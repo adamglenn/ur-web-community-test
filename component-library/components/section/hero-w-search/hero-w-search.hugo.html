@@ -1,0 +1,94 @@
+{{ $backgroundColor := "bg-dark" }}
+{{ $textColor := "text-white" }}
+{{ $backgroundImage := "" }}
+{{ $blendMode := "" }}
+{{ $alt := "" }}
+{{ $foregroundImage := "" }}
+{{ $align := "" }}
+{{ $headingStyles := "display-2 wvu-shout" }}
+{{ $headingExtras := "" }}
+{{ $leadStyles := "" }}
+{{ $bodyStyles := "" }}
+
+{{ if and .styles .styles.background_c }}{{ $backgroundColor = .styles.background_c }}{{ end }}
+{{ if and .styles .styles.text_c }}{{ $textColor = .styles.text_c }}{{ end }}
+
+{{ if and .background_image .background_image.image }}{{ $backgroundImage = .background_image.image }}{{ end }}
+{{ if and .background_image .background_image.alt }}{{ $alt = .background_image.alt }}{{ end }}
+{{ if and .foreground_image .foreground_image.image }}{{ $foregroundImage = .foreground_image.image }}{{ end }}
+{{ if and .foreground_image .foreground_image.alt }}{{ $alt = .foreground_image.alt }}{{ end }}
+
+<main class="position-relative {{ .styles.background_c }} {{ .styles.text_c }} overflow-hidden text-center">
+  {{ if eq .layout.show_number true }}
+    <div class="display-0 wvu-shout wvu-text-outline text-wvu-gold position-absolute wvu-z-index-max" style="font-size: 30rem !important; bottom: 0;">
+      <p class="ms-n4 mb-n5">14</p>
+    </div>
+  {{ end }}
+  {{ partial "bookshop_partial" (slice "section-foreground" (dict "image" $foregroundImage "align" $align "alt" $alt)) }}
+  <div class="{{ .layout.vertical_space }} position-relative {{ if .styles.thick_border }}m-6{{ end }}">
+    {{ partial "bookshop_partial" (slice "section-background" (dict "image" $backgroundImage "blendMode" $blendMode "alt" $alt)) }}
+    <!--
+    <div class="wvu-bg-img">
+      <div class="position-absolute w-50 h-100 d-flex justify-content-start align-items-end" style="left: 50%">
+        <div class="wvu-light-angle-blur-accent--sunset"></div>
+      </div>
+    </div>
+    -->
+    <div class="container position-relative">
+      <div class="row justify-content-center">
+        <div class="col-xl-12">
+          <div class="">
+            <p class="helvetica-neue-condensed-black text-white text-uppercase wvu-text-letter-spacing-lg h5 mb-4">Undergraduate Admissions</p>
+            <h1 class="{{ $headingStyles }} oliviar-black text-uppercase wvu-text-echo-outline wvu-text-echo-shadow text-wvu-gold mb-4" data-text="{{ .heading }}">{{ .heading }}</h1>
+            {{ if .lead }}
+              <p class="lead mb-5">{{ .lead }}</p>
+            {{ end }}
+            {{ if .body }}
+              <div class="mb-4">
+                {{ .body | markdownify }}
+              </div>
+            {{ end }}
+            <form class="form-inline w-100" action="https://search.wvu.edu/search" method="get" role="search" aria-label="Site Search">
+              <label class="visually-hidden" id="search-label" for="q">
+                <span class="visually-hidden">Search</span>
+              </label>
+              <input id="sort" name="sort" type="hidden" value="date:D:L:d1">
+              <input id="output" name="output" type="hidden" value="xml_no_dtd">
+              <input id="ie" name="ie" type="hidden" value="UTF-8">
+              <input id="oe" name="oe" type="hidden" value="UTF-8">
+              <input id="proxystylesheet" name="proxystylesheet" type="hidden" value="default_frontend">
+              <input id="client" name="client" type="hidden" value="default_frontend">
+              <div class="input-group shadow-sm w-100">
+                <input id="q" class="form-control p-4" name="q" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-primary px-3 px-lg-4" name="btnG" type="submit">
+                  <span class="h5 mb-0">
+                    <span class="fa-solid fa-magnifying-glass" aria-hidden="true"></span>
+                  </span>
+                  <span class="visually-hidden">Search</span>
+                </button>
+              </div>
+              <!--
+              <div class="row pt-1">
+                <fieldset class="col-24">
+                  <legend class="visually-hidden">Would you like to search this site specifically, or all WVU websites?</legend>
+                  <div class="d-inline-block pe-2">
+                    <input id="form-search__sitesearch" type="radio" name="as_sitesearch" value="designsystem.wvu.edu" checked="">
+                    <label class="d-inline-block" for="form-search__sitesearch">Search this site</label>
+                  </div>
+                  <div class="d-inline-block">
+                    <input id="form-search__wvusearch" type="radio" name="as_sitesearch" value="wvu.edu">
+                    <label class="d-inline-block" for="form-search__wvusearch">Search WVU</label>
+                  </div>
+                </fieldset>
+              </div>
+              -->
+            </form>
+            {{ if .postscript }}
+              {{ .postscript | markdownify }}
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

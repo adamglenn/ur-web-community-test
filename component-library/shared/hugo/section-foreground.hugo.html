@@ -1,0 +1,17 @@
+{{ $image := .image }}
+
+<div class="wvu-fg-img overflow-visible wvu-z-index-fg-img">
+  {{ if not site.Params.env_bookshop_live }}
+    {{ $image = resources.Get $image }}
+    {{ if and $image (ne $image.MediaType.SubType "svg") }}
+      {{ $image = ($image.Fit "1920x1200 center webp").RelPermalink }}
+    {{ end }}
+  {{ end }}
+  <div class="container-fluid">
+    <div class="row h-100">
+      <div class="col-xl-14 {{ if eq .align "justify-content-start" }}ms-xl-auto{{ end }} d-flex align-items-end">
+        <img class="img-fluid mt-n6 ms-n5" src="{{ $image }}" />
+      </div>
+    </div>
+  </div>
+</div>

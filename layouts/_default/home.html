@@ -1,4 +1,43 @@
 {{ define "main" }}
+  <header class="py-6">
+    <div class="container">
+      <h1 class="display-2">{{ .Title }}</h1>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      {{ .Content }}
+      <h2>Demo Pages</h2>
+      {{ $demoPages := where site.Pages "Params.type" "demo_page" }}
+      <div class="row mb-5">
+        {{ range $demoPages }}
+          <div class="col-6">
+            <div class="position-relative">
+              <div class="ratio ratio-4x3 bg-light mb-2">
+
+              </div>
+              <a href="{{ .Permalink }}" class="text-center main-font main-color-font stretched-link" style="cursor: pointer;">{{ .Title }}</a>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+      
+      <h2>Detail Pages</h2>
+      {{ $detailPages := where site.Pages "Params.type" "detail_page" }}
+      <div class="row mb-5">
+        {{ range $detailPages }}
+          <div class="col-6">
+            <div class="position-relative">
+              <div class="ratio ratio-4x3 bg-light mb-2">
+
+              </div>
+              <a href="{{ .Permalink }}" class="text-center main-font main-color-font stretched-link" style="cursor: pointer;">{{ .Title }}</a>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </main>
   {{ partial "bookshop_bindings" `.Params.content_blocks` }}
   {{ partial "bookshop_partial" (slice "page" .Params.content_blocks) }}
 {{ end }}
