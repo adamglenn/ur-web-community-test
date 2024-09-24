@@ -1,15 +1,15 @@
 {{ $headingClasses := "" }}
 {{ $leadClasses := "" }}
-{{ $layoutClasses := slice }}
+{{ $classes := slice }}
 
 {{ if eq .layout 1 }}
   {{ $headingClasses = "test-heading-classes" }}
   {{ $leadClasses = "test-lead-classes" }}
 {{ end }}
 
-{{ $layoutClasses = dict
+{{ $classes = dict
   "heading" $headingClasses
   "lead" $leadClasses
 }}
 
-{{ return $layoutClasses }}
+{{ return $classes }}
