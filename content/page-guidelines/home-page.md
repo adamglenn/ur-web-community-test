@@ -9,7 +9,7 @@ The home page serves several goals, from making a visual impact to welcoming new
 
 ### Required Sections
 
-1. The **Hero block** fills the viewport with imagery and is meant to highlight a topical news story, academic program, initiative, profile. Should include a main call to action or button group or link list of your most important user actions.
+1. The **Hero block** fills the viewport with imagery and is meant to highlight a topical news story, academic program, initiative, profile. Should include a main call to action or button group or link list of your most important user actions. There are also variations that include a search, a featured YouTube video, or a form.
 
 ### Optional Sections
 

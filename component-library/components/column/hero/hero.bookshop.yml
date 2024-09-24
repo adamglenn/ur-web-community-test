@@ -1,0 +1,53 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - column_blocks
+  label: "Hero"
+  description:
+  icon:
+  tags: []
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  background_image:
+    image:
+    alt:
+  heading: Lorem Ipsum Dolor Sit Amet
+  lead: Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  body:
+  ctas:
+    - text: Call to Action
+      associate_link:
+      external_link:
+  config:
+    is_main: false
+    id: hero
+    aria_labelledby: hero-1-label
+  layout:
+    justify_content: justify-content-start
+    cols: col-xl-10
+    padding: py-8
+    thick_border: false
+    ctas: buttons
+    show_number: false
+  styles:
+    section: 
+    content_container: normal
+    heading: display-2 wvu-shout
+    lead: lead
+    body:
+    buttons: btn-primary
+    first_button:
+    list: wvu-ul-chevrons
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  layout:
+    hidden: true
+    cascade: true
+  styles:
+    hidden: true
+    cascade: true

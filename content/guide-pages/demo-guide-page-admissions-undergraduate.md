@@ -20,7 +20,7 @@ content_blocks:
       aria_labelledby:
     layout:
       align:
-      vertical_space: py-10
+      vertical_space: pt-9 pb-10
     styles:
       background_c: bg-wvu-gold
       bg_image_blend_mode: normal
@@ -30,11 +30,18 @@ content_blocks:
       heading_extras:
       ctas: buttons
   - _bookshop_name: section/page-collection
-    text: We’re here to help every step of the way.
     page_collection_items:
-      - page: content/accessibility/_index.md
-      - page: content/cms/_index.md
-      - page: content/design-system/components/_index.md
+      - page: content/components/_index.md
+        title_override: Browse Our Majors
+      - page: content/components/_index.md
+        title_override: Explore by Career Pathway
+      - page: content/components/_index.md
+        title_override: Help Me Find a Major
+    layout:
+      margin_y: mt-n10
+    styles:
+      panels: wvu-shadow-hard-dark rounded-0 bg-wvu-accent--blue border border-1 border-dark text-white
+      item_headings: oliviar-black h1 text-wvu-accent--yellow
   - _bookshop_name: section/quicklinks-tabbed
     text: Hello, world!
   - _bookshop_name: section/call-to-action
@@ -42,3 +49,5 @@ content_blocks:
       image: /uploads/mountains.jpg
       alt:
 ---
+
+Test. Test. Test.

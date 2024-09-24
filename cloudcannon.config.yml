@@ -13,27 +13,27 @@ paths:
   publish: public
   config: ''
 collections_config:
-  pages:
-    _enabled_editors:
-      - visual
-    path: content
-    description: Pages description
-    output: true
-    filter: 
-      exclude:
-        - [*].html
-    parse_branch_index: true
-    disable_add: false
-    disable_add_folder: false
-    disable_add_file_actions: false
-    schemas:
-      page:
-        path: .cloudcannon/schemas/page.md
-        reorder_inputs: true
-        hide_extra_inputs: false
-        remove_empty_inputs: false
-        remove_extra_inputs: true
-        new_preview_url: /
+  # pages:
+  #   _enabled_editors:
+  #     - visual
+  #   path: content
+  #   description: Pages description
+  #   output: true
+  #   # filter: 
+  #   #   exclude:
+  #   #     - [*].html
+  #   parse_branch_index: true
+  #   disable_add: false
+  #   disable_add_folder: false
+  #   disable_add_file_actions: false
+  #   schemas:
+  #     page:
+  #       path: .cloudcannon/schemas/page.md
+  #       reorder_inputs: true
+  #       hide_extra_inputs: false
+  #       remove_empty_inputs: false
+  #       remove_extra_inputs: true
+  #       new_preview_url: /
   detail_pages:
     _enabled_editors:
       - visual
@@ -108,6 +108,40 @@ collections_config:
   #   disable_add: true
   #   disable_add_folder: true
   #   disable_file_actions: false
+  components_pages:
+    _enabled_editors:
+      - visual
+    path: components
+    description: Components description
+    output: true
+    disable_add: false
+    disable_add_folder: false
+    disable_add_file_actions: false
+    schemas:
+      page:
+        path: .cloudcannon/schemas/component-page.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: true
+        new_preview_url: /
+  utilities_pages:
+    _enabled_editors:
+      - visual
+    path: utilities
+    description: Utilities description
+    output: true
+    disable_add: false
+    disable_add_folder: false
+    disable_add_file_actions: false
+    schemas:
+      page:
+        path: .cloudcannon/schemas/utility-page.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: true
+        new_preview_url: /
 # collection_groups:
 #   - heading: Site Pages
 #     collections:

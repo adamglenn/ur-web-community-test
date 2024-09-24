@@ -4,31 +4,117 @@ type: demo_page
 url: /prototypes/demo/alumni
 content_blocks:
   - _bookshop_name: section/hero
-    content:
-      background_image:
-        image: /uploads/fall-for-wvu.jpg
-        alt: Student climbing on rock
-      heading: Fall for WVU
-      lead:
-      body: If you love fall as much as we do, now is the absolute best time to visit campus. Schedule a personalized tour (led by real WVU students) or register for our fully customizable Discover WVU Open House. Sign up today and experience fall in Morgantown!
-      ctas:
+    background_image:
+      image: /uploads/fall-for-wvu.jpg
+      alt:
+    heading: Lorem Ipsum Dolor Sit Amet
+    lead: Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    body:
+    ctas:
+      - text: Call to Action
+        associate_link:
+        external_link:
     config:
       is_main: false
-      id:
-      aria_labelledby:
+      id: hero
+      aria_labelledby: hero-1-label
     layout:
-      align:
-      vertical_space: py-10
-    styles:
-      background_c: bg-wvu-gold
-      bg_image_blend_mode: normal
-      text_c: text-white
-      heading_size: display-1
-      heading_c: text-white
-      heading_extras:
+      justify_content: justify-content-start
+      cols: col-xl-10
+      padding: py-9
+      thick_border: false
       ctas: buttons
+      show_number: false
+    styles:
+      section: bg-wvu-blue text-white
+      blend_mode: wvu-bg-blend-mode-lighten
+      content_container: normal
+      heading: display-2 oliviar-black text-wvu-gold
+      lead: lead oliviar-thin
+      body:
+      buttons: btn-primary
+      first_button:
+      list: wvu-ul-chevrons
   - _bookshop_name: section/icon-bar
     text: Hello, world!
+  - _bookshop_name: section/columns
+    columns:
+      - column_blocks:
+          - _bookshop_name: column/hero
+            background_image:
+              image: /uploads/fall-for-wvu.jpg
+              alt:
+            heading: Lorem Ipsum Dolor Sit Amet
+            lead: Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            body:
+            ctas:
+              - text: Call to Action
+                associate_link:
+                external_link:
+            config:
+              is_main: false
+              id: hero
+              aria_labelledby: hero-1-label
+            layout:
+              justify_content: justify-content-start
+              cols: col-xl-10
+              padding: py-6
+              thick_border: false
+              ctas: buttons
+              show_number: false
+            styles:
+              section: bg-wvu-blue text-white
+              blend_mode: wvu-bg-blend-mode-lighten
+              content_container: normal
+              heading: h1 oliviar-black text-wvu-gold
+              lead: lead oliviar-thin
+              body:
+              buttons: btn-primary
+              first_button:
+              list: wvu-ul-chevrons
+        layout:
+          column_widths:
+            sm: col
+      - column_blocks:
+          - _bookshop_name: column/hero
+            background_image:
+              image: /uploads/fall-for-wvu.jpg
+              alt:
+            heading: Lorem Ipsum Dolor Sit Amet
+            lead: Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            body:
+            ctas:
+              - text: Call to Action
+                associate_link:
+                external_link:
+            config:
+              is_main: false
+              id: hero
+              aria_labelledby: hero-1-label
+            layout:
+              justify_content: justify-content-start
+              cols: col-xl-10
+              padding: py-6
+              thick_border: false
+              ctas: buttons
+              show_number: false
+            styles:
+              section: bg-wvu-blue text-white
+              blend_mode: wvu-bg-blend-mode-lighten
+              content_container: normal
+              heading: h1 oliviar-black text-wvu-gold
+              lead: lead oliviar-thin
+              body:
+              buttons: btn-primary
+              first_button:
+              list: wvu-ul-chevrons
+        layout:
+          column_widths:
+            sm: col
+    layout:
+      padding: py-0
+      gutters:
+        sm: gx-0
   - _bookshop_name: section/page-collection
     text: We’re here to help every step of the way.
     page_collection_items:

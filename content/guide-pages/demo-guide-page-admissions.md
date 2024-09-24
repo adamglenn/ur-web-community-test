@@ -32,11 +32,19 @@ content_blocks:
   - _bookshop_name: section/icon-bar
     text: Hello, world!
   - _bookshop_name: section/page-collection
-    text: We’re here to help every step of the way.
+    heading: Let Us Be Your Guide
+    lead: We’re here to help every step of the way.
     page_collection_items:
-      - page: content/accessibility/_index.md
-      - page: content/cms/_index.md
-      - page: content/design-system/components/_index.md
+      - page: content/components/_index.md
+        title_override: Future Students
+      - page: content/components/_index.md
+        title_override: Admitted Students
+      - page: content/components/_index.md
+        title_override: Families
+      - page: content/components/_index.md
+        title_override: Graduate School
+    layout:
+      margin_y: mb-n9
   - _bookshop_name: section/quicklinks-tabbed
     text: Hello, world!
   - _bookshop_name: section/call-to-action

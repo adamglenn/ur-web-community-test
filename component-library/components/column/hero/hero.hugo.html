@@ -28,17 +28,7 @@
 {{ if and .styles .styles.lead }}{{ $lead = .styles.lead }}{{ end }}
 {{ if and .layout .layout.padding }}{{ $padding = .layout.padding }}{{ end }}
 
-{{ $layout := 1 }}
-
-{{ $layoutClasses := partial "block-layouts" (dict "layout" $layout) }}
-
-{{ $layoutClasses }}
-
-{{ $headingClasses := index $layoutClasses "heading" }}
-
-{{ $headingClasses }}
-
-<main class="position-relative {{ $section }}">
+<div class="position-relative {{ $section }}">
   {{ if eq .layout.show_number true }}
     <div class="display-0 wvu-shout wvu-text-outline text-wvu-gold position-absolute wvu-z-index-max" style="font-size: 30rem !important; bottom: 0;">
       <p class="ms-n4 mb-n5">14</p>
@@ -54,7 +44,7 @@
       </div>
     </div>
     -->
-    <div class="container wvu-z-index-content {{ $padding }}">
+    <div class="wvu-z-index-content {{ $padding }}">
       <div class="row {{ $justifyContent }}">
         <div class="{{ $cols }}">
           <div class="">
@@ -76,4 +66,4 @@
       </div>
     </div>
   </div>
-</main>
+</div>

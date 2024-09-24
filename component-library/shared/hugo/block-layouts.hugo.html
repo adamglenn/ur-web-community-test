@@ -1,0 +1,15 @@
+{{ $headingClasses := "" }}
+{{ $leadClasses := "" }}
+{{ $layoutClasses := slice }}
+
+{{ if eq .layout 1 }}
+  {{ $headingClasses = "test-heading-classes" }}
+  {{ $leadClasses = "test-lead-classes" }}
+{{ end }}
+
+{{ $layoutClasses = dict
+  "heading" $headingClasses
+  "lead" $leadClasses
+}}
+
+{{ return $layoutClasses }}

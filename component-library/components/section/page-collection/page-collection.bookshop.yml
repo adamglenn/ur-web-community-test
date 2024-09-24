@@ -10,7 +10,19 @@ spec:
 # Defines the structure of this component, as well as the default values
 blueprint:
   text: "Hello World!"
+  heading:
+  lead:
   page_collection_items:
+    - page:
+      title_override:
+      tease_override:
+      cta_text_override:
+      accent_c:
+  postscript:
+    text:
+    ctas:
+  layout:
+    margin_y:
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
@@ -19,10 +31,10 @@ preview:
 _inputs:
   page_collection_items:
     type: array
-    options:
-      structures: _structures.page_collection_item
+  page:
+    structures: _structures.page_collection_page
 _structures:
-  page_collection_item:
+  page_collection_page:
     values:
       - label: Page
         value:
