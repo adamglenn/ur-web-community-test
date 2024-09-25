@@ -12,4 +12,6 @@
   "lead" $leadClasses
 }}
 
+{{ $classes = $classes | jsonify }}
+
 {{ return $classes }}

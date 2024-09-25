@@ -30,11 +30,11 @@
 
 {{ $layout := 1 }}
 
-{{ $layoutClasses := partial "bookshop_partial" (slice "block-layouts" (dict "layout" $layout)) }}
+{{ $layoutClasses := partial "block-layouts" (dict "layout" $layout) }}
+
 
 {{ $layoutClasses }}
 
-{{ $layoutClasses.heading }}
 
 <main class="position-relative {{ $section }}">
   {{ if eq .layout.show_number true }}
